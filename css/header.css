@@ -9,7 +9,7 @@ header .menu{
     border-radius: 10px;
     margin-left: 20px;
     margin-top: 40px;
-    box-shadow: 1px 1px 10px 1px grey;
+    box-shadow: 1px 1px 10px 1px var(--cor-azul);
     background-image: url(../img/menu-burger.PNG);
     background-position: center;
     background-size: contain;

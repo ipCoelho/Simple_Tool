@@ -1,0 +1,25 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+#formulario-contatos {
+    width: 600px;
+    height: 500px;
+    border: solid 1px black;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+textarea{
+    resize: none;
+}
+
+input, textarea{
+    outline: none;
+}
+
+.destaque {
+    font-weight: bolder;
+    color: rgb(3, 132, 192);
+}

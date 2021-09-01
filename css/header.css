@@ -1,5 +1,5 @@
 header{
-    height: fit-content;
+    height: 70px;
     width: inherit;
 }
 
@@ -8,8 +8,8 @@ header .menu{
     height: 60px;
     border-radius: 10px;
     margin-left: 20px;
-    margin-top: 40px;
-    box-shadow: 1px 1px 10px 1px var(--cor-azul);
+    margin-top: 5px;
+    box-shadow: 1px 1px 10px 1px grey;
     background-image: url(../img/menu-burger.PNG);
     background-position: center;
     background-size: contain;
@@ -24,14 +24,14 @@ header .submenu{
     opacity: 0;
 }
 
-header .menu:hover > .submenu{
+/* header .menu:hover > .submenu{
     display: flex;
     flex-direction: row;
     margin-left: 65px;
     visibility: visible;
     opacity: 1;
     transition: 1s;
-}
+} */
 
 header .menuItem{
     width: 200px;
@@ -39,12 +39,22 @@ header .menuItem{
     margin-left: 10px;
     padding-top: 10px;
     border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px grey;
     text-align: center;
+    border: 1px solid var(--cor-azul);
+}
+
+header .menuItem:hover{
+    box-shadow: 10px 10px 30px 2px var(--cor-azul);
+    background-color: var(--cor-azul);
+    transition: 1s;
+    color: white;
+}
+
+header .menuItem:hover a{
+    color: white;
 }
 
 header a{
     text-decoration: none;
     color: rgb(27, 27, 27);
 }
-

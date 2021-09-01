@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Calibri Light';    
+}
+
+body{
+    width: 400px;
+    height: 300px;
+    padding-top: 200px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+body > div{
+    border-radius: 20px;
+    box-shadow: rgba(105, 105, 105, 0.726) 10px 10px 10px 0;
+    border-radius: 20px 20px 20px 20px;
+}
+
+header{
+    border-radius: 10px 10px 0 0;
+    height: 70px;
+    width: 400px;
+    padding-top: 15px;
+    background-color: grey;
+    color: white;
+}
+
+header h1{
+    font-weight: 100;
+}
+
+main{
+    height: 180px;
+    border-bottom: none;
+    border-top: none;
+    border-left: 1px solid grey;
+}
+
+footer{
+    border-radius: 0 0 10px 10px;
+    width: auto;
+    height: 50px;
+    padding-top: 12px;
+    background-color: grey;
+    color: white;
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+
+.notas{
+    padding-top: 13px;
+}
+
+.notas label{
+    font-weight: 700;
+    color: grey;
+}
+
+.notas input{
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding-left: 10px;
+}
+.notas input:hover{
+    border: solid 1px black;
+    font-size: 0.9rem;
+}
+
+.notas #btnCalcular{
+    width: 150px;
+    background-color: grey;
+    color: white;
+    font-weight: bolder;
+    border: none;
+}
+
+.notas #btnCalcular:hover{
+    background-color: black;
+}
+
+

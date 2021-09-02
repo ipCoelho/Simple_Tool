@@ -1,3 +1,32 @@
+<?php
+require_once('functions.php');
+// variáveis
+$num1 = (double) 0;
+$num2 = (double) 0;
+$operacao = (string) null;
+$resultado = (string) null;
+// msgs de Erro
+const ERRO_DADOS_NAO_NUMERICOS = "<span class='msgErro'>Valores não numéricos!</span>";
+const ERRO_CAIXA_VAZIA = "<span class='msgErro'>Caixas Vazias!</span>";
+
+if(isset($_POST['btnCalcular'])){
+    $num1 = $_POST['iptValor1'];
+    $num2 = $_POST['iptValor2'];
+    $operacao = strtoupper($_POST['sltOperacao']);
+    if(!$num1 == "" && !$num2 == ""){
+        if(is_numeric($num1) && is_numeric($num2)){
+            $resultado = calcular($num1, $num2, $operacao);
+        }
+        else{
+            echo(ERRO_DADOS_NAO_NUMERICOS);
+        }
+    }
+    else{
+        echo(ERRO_CAIXA_VAZIA);
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -32,7 +61,24 @@
         </div>
     </header>
     <main>
-
+        <section class="div-main">
+            <form action="page.operacoes.php" method="post" id="form-media">
+                <div class="div-form">
+                    <div class="div-input">
+                        <input type="text" name="iptValor1" class="inputs">
+                            <select name="sltOperacao" id="select-operacao">
+                                <option value="som">+</option>
+                                <option value="sub">-</option>
+                                <option value="mul">*</option>
+                                <option value="div">/</option>
+                            </select>
+                        <input type="text" name="iptValor2" class="inputs">    
+                    </div>
+                    <button type="submit" name="btnCalcular" id="button-calcular">Calcular</button>
+                    <div class="div-resultado"><?=$resultado;?></div>
+                </div>
+            </form>
+        </section>
     </main>
     <footer>
         <span>Copyright &copy; 2021 | Israel Pablo Coelho</span>

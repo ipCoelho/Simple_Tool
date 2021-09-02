@@ -14,7 +14,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/parimpar.css">
     <link rel="stylesheet" href="../css/footer.css">
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -31,7 +31,34 @@
             </div>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section class="div-main">
+            <div class="box-entrada">
+                <div class="box-select">
+                    <select name="sltInicial" class="">
+                        <option value="">Selecione um número..</option>
+                    </select>
+                    <select name="sltFinal" class="">
+                        <option value="">Selecione um número..</option>
+                    </select>
+                </div>
+                <button type="submit" id="button-contar">Contar</button>
+            </div>
+            <div class="box-saida">
+                <div class="box-pares">
+                    <h1></h1>
+                    <div class="box-saida"></div>
+                    <div class="box-quantidade-pares"></div>
+                </div>
+                <div class="box-impares">
+                    <h1></h1>
+                    <div class="box-saida"></div>
+                    <div class="box-quantidade-impares"></div>
+                </div>
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
         <span>Copyright &copy; 2021 | Israel Pablo Coelho</span>
     </footer>

@@ -31,7 +31,26 @@
             </div>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section class="div-main">
+            <form action="page.tabuada.php" method="post" id="form-media">
+                <div class="div-form">
+                    <div class="div-input">
+                        <input type="text" name="iptValor1" class="inputs">
+                            <select name="sltOperacao" id="select-operacao">
+                                <option value="som">+</option>
+                                <option value="sub">-</option>
+                                <option value="mul">*</option>
+                                <option value="div">/</option>
+                            </select>
+                        <input type="text" name="iptValor2" class="inputs">    
+                    </div>
+                    <button type="submit" name="btnCalcular" id="button-calcular">Calcular</button>
+                    <div class="div-resultado"></div>
+                </div>
+            </form>
+        </section>
+    </main>
     <footer>
         <span>Copyright &copy; 2021 | Israel Pablo Coelho</span>
     </footer>

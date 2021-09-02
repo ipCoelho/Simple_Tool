@@ -12,10 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,600;1,400;1,500&display=swap" rel="stylesheet">
     <!-- css -->
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/media.css">
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
 </head>
@@ -24,10 +24,10 @@
     <header>
         <div class="menu">
             <div class="submenu">
-                <div class="menuItem"><a href="/html/operacoes.html">Operações Simples</a></div>
-                <div class="menuItem"><a href="/html/media.html">Média</a></div>
-                <div class="menuItem"><a href="/html/tabuada.html">Tabuada</a></div>
-                <div class="menuItem"><a href="/html/parimpar.html">Par e Impar</a></div>
+                <div class="menuItem"><a href="page.operacoes.php">Operações Simples</a></div>
+                <div class="menuItem"><a href="page.media.php">Média</a></div>
+                <div class="menuItem"><a href="page.tabuada.php">Tabuada</a></div>
+                <div class="menuItem"><a href="page.parimpar.php">Par e Impar</a></div>
             </div>
         </div>
     </header>

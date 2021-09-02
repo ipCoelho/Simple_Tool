@@ -81,4 +81,6 @@ main .div-form #button-calcular{
     border-radius: 20px;
     text-align: center;
     justify-content: center;
+    color: var(--cor-azul);
+    font-size: 2rem;
 }

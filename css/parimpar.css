@@ -1,0 +1,38 @@
+main .div-main{
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: auto;
+    border-radius: 30px;
+    border: solid 1px var(--cor-azul);
+    /* box-shadow: 1px 1px 30px 2px var(--cor-azul); */
+}
+
+main .div-main:hover{
+    box-shadow: 1px 1px 30px 2px var(--cor-azul);
+    transition: 1s;
+}
+
+.box-entrada{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    height: 100px;
+    background-color: lightsalmon;
+}
+
+.box-entrada .box-select{
+    display: flex;
+    justify-content: space-evenly;
+    width: 60%;
+    height: 100%;
+    background-color: lightyellow;
+}
+
+.box-entrada .box-select select{
+    width: 180px;
+    height: 30px;
+    
+}

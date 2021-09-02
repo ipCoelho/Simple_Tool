@@ -31,7 +31,26 @@
             </div>
         </div>
     </header>
-    <main></main>
+    <main>
+        <section class="div-main">
+            <form action="page.media.php" method="post" id="form-media">
+                <div class="div-form">
+                    <div class="div-input">
+                        <input type="text" name="iptValor1" class="inputs">
+                            <select name="sltOperacao" id="select-operacao">
+                                <option value="+">+</option>
+                                <option value="-">-</option>
+                                <option value="*">*</option>
+                                <option value="/">/</option>
+                            </select>
+                        <input type="text" name="iptValor2" class="inputs">    
+                    </div>
+                    <button type="submit" name="btnCalcular" id="button-calcular">Calcular</button>
+                    <div class="div-resultado">teste</div>
+                </div>
+            </form>
+        </section>
+    </main>
     <footer>
         <span>Copyright &copy; 2021 | Israel Pablo Coelho</span>
     </footer>

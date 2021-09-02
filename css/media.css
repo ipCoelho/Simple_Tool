@@ -1,0 +1,84 @@
+main .div-main{
+    width: 800px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin: auto;
+    border-radius: 30px;
+    border: solid 1px var(--cor-azul);
+    /* box-shadow: 1px 1px 30px 2px var(--cor-azul); */
+}
+
+main .div-main:hover{
+    box-shadow: 1px 1px 30px 2px var(--cor-azul);
+    transition: 1s;
+}
+
+main .div-form{
+    width: inherit;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 30px;
+    flex-direction: column;
+}
+
+main .div-input{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 800px;
+    height: 250px;
+}
+
+main .div-input .inputs{
+    width: 200px;
+    height: 70px;
+    margin-top: 12%;
+    border: none;
+    border-bottom: solid 1px var(--cor-azul);
+    border-radius: 5px;
+    text-align: center;
+    font-size: 2rem;
+    color: var(--cor-azul);
+}
+
+main .div-form #button-calcular{
+    margin-left: auto;
+    margin-right: auto;
+    
+    width: 200px;
+    height: 50px;
+    border: none;
+    background-color: var(--cor-azul);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#select-operacao{
+    height: 30px;
+    width: 50px;
+    margin-top: 120px;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    background-color: var(--cor-azul);
+    text-align: justify;
+}
+
+.div-resultado{
+    display: flex;
+    flex-direction: column;
+    margin-top: 13%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 300px;
+    height: 120px;
+    border: solid 1px var(--cor-azul);
+    border-radius: 20px;
+    text-align: center;
+    justify-content: center;
+}

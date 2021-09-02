@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box; 
     --cor-azul: #1a73e8;
+    font-family: 'Karla', sans-serif;
 }
 
 body{
@@ -21,3 +22,12 @@ main{
     flex-grow: 1;
 }
 
+.icon-menu{
+    width: 30%;
+    height: 30%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}

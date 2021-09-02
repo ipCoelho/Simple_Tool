@@ -14,14 +14,16 @@ main section.page-section{
 
 main section.page-section div.page{
     width: 80%;
-    height: 50%;
+    height: 40%;
     border-radius: 20px;
-    /* box-shadow: 1px 1px 10px 1px var(--cor-azul); */
+    border: 2px solid var(--cor-azul);
+    position: relative;
+    margin-top: 25px
 }
 
 main section.page-section div.page:hover{
     width: 80%;
-    height: 50%;
+    height: 40%;
     border-radius: 20px;
     box-shadow: 10px 10px 30px 2px var(--cor-azul);
     background-color: var(--cor-azul);
@@ -37,3 +39,35 @@ main section.page-section div.page-right{
     align-self: flex-start;
     margin-left: 10px;
 }
+
+main section.page-section div.page p{
+    float: inline-start;
+    font-size: 25px;   
+}
+
+main section.page-section div.page #phrase-Operacoes{
+    margin-left: 34%;
+    margin-top: 54%;
+}
+
+main section.page-section div.page #phrase-ParImpar{
+    margin-left: 33%;
+    margin-top: 54%;
+}
+
+main section.page-section div.page #phrase-Media{
+    margin-left: 40%;
+    margin-top: 54%;
+}
+
+main section.page-section div.page #phrase-Tabuada{
+    margin-left: 36.8%;
+    margin-top: 54%;
+}
+
+main section.page-section div.page:hover p{
+    color: white;
+    transition: 1s;
+}
+
+

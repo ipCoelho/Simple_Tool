@@ -26,10 +26,10 @@
     <header>
         <div class="menu">
             <div class="submenu">
-                <div class="menuItem"><a href="/html/operacoes.html">Operações Simples</a></div>
-                <div class="menuItem"><a href="/html/media.html">Média</a></div>
-                <div class="menuItem"><a href="/html/tabuada.html">Tabuada</a></div>
-                <div class="menuItem"><a href="/html/parimpar.html">Par e Impar</a></div>
+                <div class="menuItem"><a href="page.operacoes.php">Operações Simples</a></div>
+                <div class="menuItem"><a href="page.media.php">Média</a></div>
+                <div class="menuItem"><a href="page.tabuada.php">Tabuada</a></div>
+                <div class="menuItem"><a href="page.parimpar.php">Par e Impar</a></div>
             </div>
         </div>
     </header>

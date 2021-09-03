@@ -6,6 +6,7 @@ $num2 = (double) 0;
 $operacao = (string) null;
 $resultado = (string) null;
 // msgs de Erro
+$erro = (string) null;
 const ERRO_DADOS_NAO_NUMERICOS = "<span class='msgErro'>Valores não numéricos!</span>";
 const ERRO_CAIXA_VAZIA = "<span class='msgErro'>Caixas Vazias!</span>";
 
@@ -18,11 +19,11 @@ if(isset($_POST['btnCalcular'])){
             $resultado = calcular($num1, $num2, $operacao);
         }
         else{
-            echo(ERRO_DADOS_NAO_NUMERICOS);
+            $erro = ERRO_DADOS_NAO_NUMERICOS;
         }
     }
     else{
-        echo(ERRO_CAIXA_VAZIA);
+        $erro = ERRO_CAIXA_VAZIA;
     }
 }
 ?>
@@ -75,7 +76,7 @@ if(isset($_POST['btnCalcular'])){
                         <input type="text" name="iptValor2" class="inputs">    
                     </div>
                     <button type="submit" name="btnCalcular" id="button-calcular">Calcular</button>
-                    <div class="div-resultado"><?=$resultado;?></div>
+                    <div class="div-resultado"><?=$resultado;?><?=$erro;?></div>
                 </div>
             </form>
         </section>

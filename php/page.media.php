@@ -38,21 +38,16 @@
     </header>
     <main>
         <section class="div-main">
-            <form action="page.media.php" method="post" id="form-media">
-                <div class="div-form">
-                    <div class="div-input">
-                        <input type="text" name="iptValor1" class="inputs">
-                            <select name="sltOperacao" id="select-operacao">
-                                <option value="+">+</option>
-                                <option value="-">-</option>
-                                <option value="*">*</option>
-                                <option value="/">/</option>
-                            </select>
-                        <input type="text" name="iptValor2" class="inputs">    
+            <form action="" method="post" id="form-media">
+                <div class="div-input">
+                    <div class="div-textbox">
+                        <input type="text" name="value1" class="input-value">
+                        <input type="text" name="value2" class="input-value">
                     </div>
-                    <button type="submit" name="btnCalcular" id="button-calcular">Calcular</button>
-                    <div class="div-resultado">teste</div>
+                    <div class="text-divided-2">2</div>
+                    <button type="submit">Calcular</button>
                 </div>
+                <div class="div-resultado"></div>
             </form>
         </section>
     </main>

@@ -24,63 +24,44 @@ main .div-form{
     flex-direction: column;
 }
 
-main .div-input{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 800px;
-    height: 250px;
-}
+/* --------------------------- Section Média ---------------------------  */
 
-main .div-input .inputs{
-    width: 200px;
-    height: 70px;
-    margin-top: 12%;
-    border: none;
-    border-bottom: solid 1px var(--cor-azul);
-    border-radius: 5px;
-    text-align: center;
-    font-size: 2rem;
-    color: var(--cor-azul);
-}
-
-main .div-form #button-calcular{
-    margin-left: auto;
-    margin-right: auto;
-    
-    width: 200px;
-    height: 50px;
-    border: none;
-    background-color: var(--cor-azul);
-    color: white;
-    font-size: 1.1rem;
-    cursor: pointer;
-    border-radius: 10px;
-}
-
-#select-operacao{
-    height: 30px;
-    width: 50px;
-    margin-top: 120px;
-    color: white;
-    border-radius: 5px;
-    border: none;
-    background-color: var(--cor-azul);
-    text-align: justify;
-}
-
-.div-resultado{
+.div-input{
     display: flex;
     flex-direction: column;
-    margin-top: 13%;
-    margin-left: auto;
-    margin-right: auto;
-    width: 300px;
-    height: 120px;
-    border: solid 1px var(--cor-azul);
-    border-radius: 20px;
+    align-items: center;
+    width: inherit;
+    height: 200px;
+    background-color: lightyellow;
+}
+
+.div-input .div-textbox{
+    display: flex;
+    flex-direction: row;
+    width: inherit;
+    height: 100px;
+}
+
+.div-input .div-textbox .input-value{
+    width: 200px;
+    height: 70px;
+    border: none;
+    margin-top: 2%;
+    border-radius: 5px;
     text-align: center;
-    justify-content: center;
-    color: var(--cor-azul);
     font-size: 2rem;
+    color: var(--cor-azul);
+}
+
+.div-input button{
+    width: 200px;
+    height: fit-content;
+    background-color: lightslategrey;
+    font-size: 2rem;
+
+}
+
+
+.div-resultado{
+
 }

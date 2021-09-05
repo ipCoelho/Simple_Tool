@@ -42,7 +42,8 @@ function calcularTabuadaDo($tabuada, $contador){
     $resultado = (int) 0;
     $saida = (String) null;
     $saida = `{$tabuada} x {$contador} = {$resultado}`;
-    return $saida;
+    return round($saida, 2);
 }
 // Tabuada - FIM
 ?>
+

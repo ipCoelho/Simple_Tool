@@ -35,14 +35,12 @@ main .div-form{
     background-color: lightyellow;
 }
 
-.div-input .div-textbox{
-    display: flex;
-    flex-direction: row;
+.div-input > .div-textbox{
     width: inherit;
     height: 100px;
 }
 
-.div-input .div-textbox .input-value{
+.div-input > .div-textbox > .input-value{
     width: 200px;
     height: 70px;
     border: none;
@@ -63,5 +61,5 @@ main .div-form{
 
 
 .div-resultado{
-
+    width: auto;
 }

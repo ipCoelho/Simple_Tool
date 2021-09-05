@@ -1,10 +1,14 @@
 <?php
 require_once('functions.php');
 // variáveis
-$num1 = (double) 0;
-$num2 = (double) 0;
+$num1 = (double) null;
+$num2 = (double) null;
 $operacao = (string) null;
 $resultado = (string) null;
+$sltSom = (string) null; 
+$sltSub = (string) null;
+$sltMul = (string) null;
+$sltDiv = (string) null;
 // msgs de Erro
 $erro = (string) null;
 const ERRO_DADOS_NAO_NUMERICOS = "<span class='msgErro'>Valores não numéricos!</span>";
@@ -14,6 +18,20 @@ if(isset($_POST['btnCalcular'])){
     $num1 = $_POST['iptValor1'];
     $num2 = $_POST['iptValor2'];
     $operacao = strtoupper($_POST['sltOperacao']);
+
+    if ($operacao == "SOM"){
+        $sltSom = "selected";
+    }
+    else if ($operacao == "SUB"){
+        $sltSub = "selected";
+    }
+    else if ($operacao == "MUL"){
+        $sltMul = "selected";
+    }
+    else{
+        $sltDiv = "selected";
+    }
+
     if(!$num1 == "" && !$num2 == ""){
         if(is_numeric($num1) && is_numeric($num2)){
             $resultado = calcular($num1, $num2, $operacao);
@@ -66,14 +84,14 @@ if(isset($_POST['btnCalcular'])){
             <form action="page.operacoes.php" method="post" id="form-media">
                 <div class="div-form">
                     <div class="div-input">
-                        <input type="text" name="iptValor1" class="inputs">
-                            <select name="sltOperacao" id="select-operacao">
-                                <option value="som">+</option>
-                                <option value="sub">-</option>
-                                <option value="mul">*</option>
-                                <option value="div">/</option>
+                        <input type="text" name="iptValor1" class="inputs" maxlength="8" value="<?=$num1;?>">
+                            <select name="sltOperacao" id="select-operacao" value="<?=$operacao;?>">
+                                <option value="som" <?=$sltSom?>>+</option>
+                                <option value="sub" <?=$sltSub?>>-</option>
+                                <option value="mul" <?=$sltMul?>>*</option>
+                                <option value="div" <?=$sltDiv?>>/</option>
                             </select>
-                        <input type="text" name="iptValor2" class="inputs">    
+                        <input type="text" name="iptValor2" class="inputs" maxlength="8" value="<?=$num2;?>">    
                     </div>
                     <button type="submit" name="btnCalcular" id="button-calcular">Calcular</button>
                     <div class="div-resultado"><?=$resultado;?><?=$erro;?></div>

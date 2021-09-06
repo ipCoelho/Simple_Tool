@@ -4,15 +4,22 @@ $num1 = (double) null;
 $num2 = (double) null;
 $operacao = (string) null;
 $resultado = (string) null;
+$erro = (string) null;
 $sltSom = (string) null; 
 $sltSub = (string) null;
 $sltMul = (string) null;
 $sltDiv = (string) null;
+// variáveis da Tabuada
+$tabuada = (int) 0;
+$contador = (int) 0;
+$indice = (int) 0;
+$equacao = (string) null;
+
 // msgs de Erro
 $erro = (string) null;
 const ERRO_DADOS_NAO_NUMERICOS = "<span class='msgErro'>Valores não numéricos!</span>";
 const ERRO_CAIXA_VAZIA = "<span class='msgErro'>Caixas Vazias!</span>";
-
+const ERRO_TABUADA_ZERO = "<span class='msgErro'>Tabuada do Zero!</span>";
 // functions
 
 // Calculadora Simples

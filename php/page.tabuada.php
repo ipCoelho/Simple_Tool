@@ -1,3 +1,32 @@
+<?php
+    require_once('functions.php');
+   
+    if(isset($_POST['btnCalcular'])){
+        $tabuada = $_POST['iptTabuada'];
+        $contador = $_POST['iptContador'];
+        if(!$tabuada == "" && !$contador == ""){
+            if(is_numeric($tabuada) && is_numeric($contador)){
+                if(!$tabuada == 0){
+                    for($indice = 0; $indice <= $contador; $indice++){
+                        $equacao = $indice * $tabuada;
+                        $resultado = $resultado.$tabuada." x ".$indice." = ".$equacao."<br>";
+                    }
+                }
+                else{
+                    $erro = ERRO_TABUADA_ZERO;
+                }    
+            }
+            else{
+                $erro = ERRO_DADOS_NAO_NUMERICOS;
+            }
+        }    
+        else{
+            $erro = ERRO_CAIXA_VAZIA;
+        }
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,7 +43,7 @@
     <!-- css -->
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/header.css">
-    <link rel="stylesheet" href="../css/media.css">
+    <link rel="stylesheet" href="../css/tabuada.css">
     <link rel="stylesheet" href="../css/footer.css">
     <!-- js -->
     <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
@@ -33,20 +62,20 @@
     </header>
     <main>
         <section class="div-main">
-            <form action="page.tabuada.php" method="post" id="form-media">
+            <form action="" method="post" id="form-media">
                 <div class="div-form">
-                    <div class="div-input">
-                        <input type="text" name="iptValor1" class="inputs">
-                            <select name="sltOperacao" id="select-operacao">
-                                <option value="som">+</option>
-                                <option value="sub">-</option>
-                                <option value="mul">*</option>
-                                <option value="div">/</option>
-                            </select>
-                        <input type="text" name="iptValor2" class="inputs">    
+                    <div class="div-input-father">
+                        <div class="div-input">
+                            <label for="input" class="label-input">Tabuada do: </label>
+                            <input type="text" name="iptTabuada" maxlength="3" class="input" value="<?=$tabuada?>">
+                        </div>  
+                        <div class="div-input">
+                            <label for="input" class="label-input">Até: </label>
+                            <input type="text" name="iptContador" maxlength="3" class="input" value="<?=$contador?>">
+                        </div>
                     </div>
                     <button type="submit" name="btnCalcular" id="button-calcular">Calcular</button>
-                    <div class="div-resultado"></div>
+                    <div class="div-resultado" ><?=$resultado?><?=$erro?></div>
                 </div>
             </form>
         </section>

@@ -42,6 +42,7 @@
                 <div class="div-input">
                     <div class="div-textbox">
                         <input type="text" name="value1" class="input-value">
+                        <div class="plus">+</div>
                         <input type="text" name="value2" class="input-value">
                     </div>
                     <div class="text-divided-2">2</div>

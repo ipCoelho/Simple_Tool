@@ -27,39 +27,84 @@ main .div-form{
 /* --------------------------- Section Média ---------------------------  */
 
 .div-input{
+    height: 400px;
+    width: inherit;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    width: inherit;
-    height: 200px;
-    background-color: lightyellow;
+    /* background-color: darkgoldenrod; */
 }
 
 .div-input > .div-textbox{
     width: inherit;
-    height: 100px;
+    height: 150px;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-evenly;
+    /* background-color: darkblue; */
 }
 
 .div-input > .div-textbox > .input-value{
     width: 200px;
     height: 70px;
     border: none;
-    margin-top: 2%;
+    border: solid 1px var(--cor);
     border-radius: 5px;
     text-align: center;
     font-size: 2rem;
     color: var(--cor-azul);
 }
 
+.div-input > .div-textbox > .plus{
+    /* padding-bottom: 5px; */
+    font-size: 4rem;
+    color: var(--cor-azul);
+    /* background-color: darkorange; */
+}
+
+.input-value:focus{
+    outline: none;
+    border: none;
+}
+
+.div-input > .text-divided-2{
+    width: 75%;
+    height: fit-content;
+    align-self: center;
+    text-align: center;
+    border-top: solid 1px var(--cor-azul);
+    font-size: 4rem;
+    color: var(--cor-azul);
+    /* background-color: darkgreen; */
+}
+
 .div-input button{
     width: 200px;
     height: fit-content;
-    background-color: lightslategrey;
+    margin-top: 70px;
+    align-self: center;
     font-size: 2rem;
-
+    border: solid 1px var(--cor-azul);
+    border-radius: 5px;
+    color: var(--cor-azul);
+    background-color: white;
 }
 
+.div-input button:hover{
+    color: white;
+    background-color: var(--cor-azul);
+    box-shadow: 10px 10px 30px 2px var(--cor-azul);
+    transition: 1s;
+}
 
 .div-resultado{
-    width: auto;
+    width: 300px;
+    height: 120px;
+    text-align: center;
+    justify-content: center;
+    /* align-self: center; */
+    margin-left: auto;
+    margin-right: auto;
+    border: solid 1px var(--cor-azul);
+    border-radius: 20px;
 }

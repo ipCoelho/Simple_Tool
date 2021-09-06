@@ -1,6 +1,22 @@
 <?php
+require_once('functions.php');
 
+    if(isset($_POST['btnCalcular'])){
+        $num1 = $_POST['value1'];
+        $num2 = $_POST['value2'];
 
+        if(!$num1 == "" && !$num2 == ""){
+            if(is_numeric($num1) && is_numeric($num2)){
+                $resultado = ($num1 + $num2) / 2;
+            }
+            else{
+                $erro = ERRO_DADOS_NAO_NUMERICOS;
+            }
+        }
+        else{
+            $erro = ERRO_CAIXA_VAZIA;
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -41,14 +57,14 @@
             <form action="" method="post" id="form-media">
                 <div class="div-input">
                     <div class="div-textbox">
-                        <input type="text" name="value1" class="input-value">
+                        <input type="text" name="value1" maxlength="8" class="input-value" value="<?=$num1;?>">
                         <div class="plus">+</div>
-                        <input type="text" name="value2" class="input-value">
+                        <input type="text" name="value2" maxlength="8" class="input-value" value="<?=$num2;?>">
                     </div>
                     <div class="text-divided-2">2</div>
-                    <button type="submit">Calcular</button>
+                    <button type="submit" name="btnCalcular">Calcular</button>
                 </div>
-                <div class="div-resultado"></div>
+                <div class="div-resultado"><?=$resultado;?><?=$erro?></div>
             </form>
         </section>
     </main>

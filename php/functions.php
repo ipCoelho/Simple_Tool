@@ -1,4 +1,18 @@
 <?php
+// variáveis
+$num1 = (double) null;
+$num2 = (double) null;
+$operacao = (string) null;
+$resultado = (string) null;
+$sltSom = (string) null; 
+$sltSub = (string) null;
+$sltMul = (string) null;
+$sltDiv = (string) null;
+// msgs de Erro
+$erro = (string) null;
+const ERRO_DADOS_NAO_NUMERICOS = "<span class='msgErro'>Valores não numéricos!</span>";
+const ERRO_CAIXA_VAZIA = "<span class='msgErro'>Caixas Vazias!</span>";
+
 // functions
 
 // Calculadora Simples

@@ -1,3 +1,24 @@
+<?php
+    require_once('functions.php');
+
+    if(isset($_POST['btnCalcular'])){
+        $inicio = $_POST['sltInicial'];
+        $final = $_POST['sltFinal'];
+        if ($inicio == "" || $final == "") {$erro = ERRO_CAIXA_VAZIA;} else
+        if ($inicio >= $final) {$erro = ERRO_FINAL_MENOR;} else
+        if (!is_numeric($inicio) && !is_numeric($final)) {$erro = ERRO_DADOS_NAO_NUMERICOS;} else
+        for($index = $inicio; $index <= $final; $index++){
+            if($index % 2 == 0){
+                $par = $par.", ".$index; 
+                $qntPar++;
+            }
+            else{
+                $impar = $impar.", ".$index; 
+                $qntImpar++;
+            }
+        }
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -33,30 +54,44 @@
     </header>
     <main>
         <section class="div-main">
-            <div class="box-entrada">
-                <div class="box-select">
-                    <select name="sltInicial" class="">
-                        <option value="">Selecione um número..</option>
-                    </select>
-                    <select name="sltFinal" class="">
-                        <option value="">Selecione um número..</option>
-                    </select>
+            <form action="" method="post">
+                <div class="box-entrada">
+                    <div class="box-select">
+                        <label for="sltInicial">Início:</label>
+                        <select name="sltInicial" class="select">
+                            <option value="">Selecione...</option>
+                            <?php
+                                for($index = 0; $index <= 500; $index++){
+                                    echo('<option value="'.$index.'">'.$index.'</option>');
+                                }
+                            ?>
+                        </select>
+                        <label for="sltFinal">Final:</label>
+                        <select name="sltFinal" class="select">
+                            <option value="">Selecione...</option>
+                            <?php
+                                for($index = 100; $index <= 1000; $index++){
+                                    echo('<option value="'.$index.'">'.$index.'</option>');
+                                }
+                            ?>
+                        </select>
+                    </div>
+                    <button type="submit" name="btnCalcular" id="button-contar">Contar</button>
                 </div>
-                <button type="submit" id="button-contar">Contar</button>
-            </div>
+            </form>
             <div class="box-saida">
                 <div class="box-pares">
-                    <h1></h1>
-                    <div class="box-saida"></div>
-                    <div class="box-quantidade-pares"></div>
+                    <h3>Números Pares</h3>
+                    <div class="box-saida-numeros"><?=$par."."?></div>
+                    <div class="box-qnt-pares"><span><?=$qntPar?></span> números pares.</div>
                 </div>
                 <div class="box-impares">
-                    <h1></h1>
-                    <div class="box-saida"></div>
-                    <div class="box-quantidade-impares"></div>
-                </div>
+                    <h3>Números Ímpares</h3>
+                    <div class="box-saida-numeros"><?=$impar."."?></div>
+                    <div class="box-qnt-impares"><span><?=$qntImpar?></span> números ímpares.</div>
                 </div>
             </div>
+            <div id="ifErro"><?=$erro?></div>
         </section>
     </main>
     <footer>

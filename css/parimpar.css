@@ -20,19 +20,93 @@ main .div-main:hover{
     flex-direction: row;
     width: inherit;
     height: 100px;
-    background-color: lightsalmon;
+    /* background-color: lightsalmon; */
 }
 
 .box-entrada .box-select{
+    width: 500px;
+    height: 100px;
     display: flex;
-    justify-content: space-evenly;
-    width: 60%;
-    height: 100%;
-    background-color: lightyellow;
+    align-items: center;
+    justify-content: center;
+    /* background-color: darkcyan; */
 }
 
-.box-entrada .box-select select{
-    width: 180px;
+.box-entrada #button-contar, .select{
+    width: 150px;
     height: 30px;
-    
+    align-self: center;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.box-entrada #button-contar, label{
+    margin-right: 2%;
+    margin-left: 7%;
+    font-size: 1.2rem;
+    color: var(--cor-azul);
+}
+
+.box-entrada #button-contar:hover{
+    background-color: var(--cor-azul);
+    color: white;
+    transition: 1s;
+}
+
+.box-saida{
+    width: 80%;
+    height: inherit;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.box-pares, .box-impares{
+    width: 50%;
+    height: 90%;
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    /* border: solid 1px black; */
+    /* background-color: lightpink; */
+}
+
+.box-saida h3{
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--cor-azul);
+}
+
+.box-saida .box-saida-numeros{
+    /* flex-grow: 1; */
+    height: 400px;
+    padding: 20px;
+    font-size: 1.5rem;
+    word-spacing: 10%;
+    overflow: auto;
+    display: block;
+    border: solid 2px var(--cor-azul);
+    border-radius: 20px 0 0 20px;
+}
+
+.box-saida .box-qnt-pares, .box-qnt-impares{
+    margin-top: 3%;
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+.box-saida .box-qnt-pares > span, .box-qnt-impares > span{
+    color: var(--cor-azul);
+    font-weight: bold;
+}
+
+#ifErro{
+    width: 80%;
+    height: fit-content;
+    margin-bottom: 5%;
+    align-self: center;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--cor-azul);
 }

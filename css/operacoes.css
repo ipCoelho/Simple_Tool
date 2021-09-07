@@ -41,7 +41,7 @@ main .div-input .inputs{
     border-radius: 5px;
     text-align: center;
     font-size: 2rem;
-    color: var(--cor-azul);
+    /* color: var(--cor-azul); */
 }
 
 main .div-form #button-calcular{
@@ -87,6 +87,6 @@ main .div-form #button-calcular:hover{
     border-radius: 20px;
     text-align: center;
     justify-content: center;
-    color: var(--cor-azul);
+    /* color: var(--cor-azul); */
     font-size: 2rem;
 }

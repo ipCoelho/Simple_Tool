@@ -12,6 +12,8 @@ $sltDiv = (string) null;
 // variáveis da Tabuada
 $tabuada = (int) 0;
 $contador = (int) 0;
+// $tabuada = (string) null;
+// $contador = (string) null;
 $indice = (int) 0;
 $equacao = (string) null;
 // variáveis do ImparPar
@@ -27,7 +29,8 @@ $qntImpar = (int) 0;
 $erro = (string) null;
 const ERRO_DADOS_NAO_NUMERICOS = "<span class='msgErro'>Valores não numéricos!</span>";
 const ERRO_CAIXA_VAZIA = "<span class='msgErro'>Caixas Vazias!</span>";
-const ERRO_TABUADA_ZERO = "<span class='msgErro'>Tabuada do Zero!</span>";
+const ERRO_TABUADA_ZERO = "<span class='msgErro'>A tabuada e o contador devem ter valor maior que 0!</span>";
+const ERRO_VALOR_ZERO = "<span class='msgErro'>Os valores tem de ser maior que 0!</span>";
 const ERRO_FINAL_MENOR = "<span class='msgErro'>Valor inicial deve ser menos que o valor final!</span>";
 // functions
 

@@ -4,16 +4,16 @@
     if(isset($_POST['btnCalcular'])){
         $tabuada = $_POST['iptTabuada'];
         $contador = $_POST['iptContador'];
-        if(!$tabuada == "" && !$contador == ""){
+        if(!empty($tabuada) && !empty($contador)){
             if(is_numeric($tabuada) && is_numeric($contador)){
-                if(!$tabuada == 0){
+                if(!$tabuada === 0 && !$contador === 0){
                     for($indice = 0; $indice <= $contador; $indice++){
                         $equacao = $indice * $tabuada;
                         $resultado = $resultado.$tabuada." x ".$indice." = ".$equacao."<br>";
                     }
                 }
                 else{
-                    $erro = ERRO_TABUADA_ZERO;
+                    $erro = ERRO_VALOR_ZERO;
                 }    
             }
             else{
